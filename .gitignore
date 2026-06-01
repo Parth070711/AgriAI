@@ -1,0 +1,5 @@
+backend/venv/
+frontend/node_modules/
+backend/uploads/
+backend/__pycache__/
+*.pyc
