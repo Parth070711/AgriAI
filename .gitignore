@@ -2,6 +2,5 @@ backend/venv/
 frontend/node_modules/
 backend/uploads/
 backend/dataset/
-backend/models/plant_disease/model.pth
 __pycache__/
 *.pyc
