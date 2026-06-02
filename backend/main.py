@@ -29,6 +29,8 @@ async def upload_image(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    result = predict_disease(file_path)
-
-    return result
+    try:
+        result = predict_disease(file_path)
+        return result
+    except Exception as e:
+        return {"error": str(e)}
