@@ -29,7 +29,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://agriai-backend-ctmq.onrender.com/",
+        "https://agriai-backend-ctmq.onrender.com/upload",
         {
           method: "POST",
           body: formData,
