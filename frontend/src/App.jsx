@@ -4,6 +4,7 @@ function App() {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleFileChange = (e) => {
     const selected = e.target.files[0];
@@ -16,21 +17,45 @@ function App() {
   };
 
   const uploadImage = async () => {
+    if (!file) {
+      alert("Please select an image.");
+      return;
+    }
+
+    setLoading(true);
+
     const formData = new FormData();
     formData.append("file", file);
 
-    const response = await fetch("http://127.0.0.1:8000/upload", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch(
+        "http://127.0.0.1:8000/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
-    const data = await response.json();
-    setResult(data);
+      const data = await response.json();
+
+      setResult(data);
+    } catch (error) {
+      console.error(error);
+      alert("Failed to connect to backend.");
+    }
+
+    setLoading(false);
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "40px" }}>
-      <h1>🌱 AgriAI</h1>
+    <div
+      style={{
+        textAlign: "center",
+        padding: "40px",
+        fontFamily: "Arial",
+      }}
+    >
+      <h1>🌱 AgriAI Crop Disease Detector</h1>
 
       <input
         type="file"
@@ -38,34 +63,87 @@ function App() {
         onChange={handleFileChange}
       />
 
-      <br /><br />
+      <br />
+      <br />
 
       {preview && (
         <img
           src={preview}
           alt="Preview"
           width="300"
+          style={{
+            borderRadius: "10px",
+            border: "2px solid #ddd",
+          }}
         />
       )}
 
-      <br /><br />
+      <br />
+      <br />
 
-      <button onClick={uploadImage}>
+      <button
+        onClick={uploadImage}
+        style={{
+          padding: "10px 20px",
+          fontSize: "16px",
+          cursor: "pointer",
+        }}
+      >
         Analyze Crop
       </button>
 
+      <br />
+      <br />
+
+      {loading && (
+        <h3>🔄 Analyzing Image...</h3>
+      )}
+
       {result && (
-        <div style={{ marginTop: "20px" }}>
+        <div
+          style={{
+            marginTop: "20px",
+            border: "1px solid #ddd",
+            borderRadius: "10px",
+            padding: "20px",
+            maxWidth: "700px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
           <h2>Analysis Result</h2>
 
-          <p><strong>Disease:</strong> {result.disease}</p>
+          <h3>
+            🌿 Disease: {result.disease}
+          </h3>
 
-          <p><strong>Confidence:</strong> {result.confidence}%</p>
+          <h3>
+            🎯 Confidence: {result.confidence}%
+          </h3>
 
-          <p><strong>Health Score:</strong> {result.health_score}%</p>
+          <h3>
+            🟡 Severity: {result.severity}
+          </h3>
 
-          <p><strong>Recommendation:</strong></p>
-          <p>{result.recommendation}</p>
+          <h3>
+            ❤️ Health Score: {result.health_score}%
+          </h3>
+
+          <h3>
+            💡 Recommendation
+          </h3>
+
+          <p>
+            {result.recommendation}
+          </p>
+
+          <h3>
+            📖 About Disease
+          </h3>
+
+          <p>
+            {result.about}
+          </p>
         </div>
       )}
     </div>
