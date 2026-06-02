@@ -1,7 +1,10 @@
+import os
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from models.plant_disease.disease_detector import predict_disease
 import shutil
+
+os.makedirs("uploads", exist_ok=True)
 
 app = FastAPI()
 
