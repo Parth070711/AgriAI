@@ -7,14 +7,48 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const handleFileChange = (e) => {
-    const selected = e.target.files[0];
+  const selected = e.target.files[0];
 
-    setFile(selected);
+  if (!selected) return;
 
-    if (selected) {
-      setPreview(URL.createObjectURL(selected));
-    }
+  const img = new Image();
+  const reader = new FileReader();
+
+  reader.onload = (event) => {
+    img.src = event.target.result;
   };
+
+  img.onload = () => {
+    const canvas = document.createElement("canvas");
+
+    canvas.width = 224;
+    canvas.height = 224;
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.drawImage(img, 0, 0, 224, 224);
+
+    canvas.toBlob(
+      (blob) => {
+        const compressedFile = new File(
+          [blob],
+          selected.name,
+          { type: "image/jpeg" }
+        );
+
+        setFile(compressedFile);
+        setPreview(URL.createObjectURL(blob));
+      },
+      "image/jpeg",
+      0.8
+    );
+  };
+
+  reader.readAsDataURL(selected);
+};
+
+  reader.readAsDataURL(selected);
+};
 
   const uploadImage = async () => {
     if (!file) {
