@@ -1,90 +1,77 @@
-\# 🌱 AgriAI
+# 🌱 AgriAI
 
+AI-powered crop disease detection platform for farmers and agricultural professionals.
 
+## 🚀 Live Demo
 
-AI-powered crop disease detection platform.
+👉 https://huggingface.co/spaces/PARTH0076/agri-ai
 
+## 📂 Source Code
 
+👉 https://github.com/Parth070711/AgriAI
 
-\## Features
+## Features
 
+* Upload crop leaf images
+* AI disease detection
+* Confidence score
+* Disease severity analysis
+* Health score calculation
+* Treatment recommendations
+* Rice disease detection
+* Leaf validation (Leaf vs Non-Leaf)
 
+## Supported Crops
 
-\- Upload crop leaf images
+* 🍅 Tomato
+* 🥔 Potato
+* 🫑 Bell Pepper
+* 🌾 Rice
 
-\- AI disease detection
+## Tech Stack
 
-\- Confidence score
+### Frontend
 
-\- Disease severity
+* React
+* Vite
 
-\- Health score
+### Backend
 
-\- Treatment recommendations
+* FastAPI
+* PyTorch
 
+### AI Models
 
+* ResNet18 Disease Detection Model
+* Leaf Detector Model
+* PlantVillage Dataset
 
-\## Tech Stack
+## Run Frontend
 
-
-
-\### Frontend
-
-\- React
-
-\- Vite
-
-
-
-\### Backend
-
-\- FastAPI
-
-\- PyTorch
-
-
-
-\### AI Model
-
-\- ResNet18
-
-\- PlantVillage Dataset
-
-
-
-\## Run Frontend
-
-
-
+```bash
 cd frontend
-
 npm install
-
 npm run dev
+```
 
+## Run Backend
 
-
-\## Run Backend
-
-
-
+```bash
 cd backend
-
+pip install -r requirements.txt
 uvicorn main:app --reload
+```
 
+## Future Features
 
+* 🌦 Weather Integration
+* 🌱 Fertilizer Recommendation
+* 🌽 Corn Disease Detection
+* 🌾 Wheat Disease Detection
+* 🚁 Drone Analysis
+* 🛰 Satellite Crop Monitoring
+* 🤖 AI Agriculture Expert Assistant
 
-\## Future Features
+## Author
 
-
-
-\- Weather integration
-
-\- Fertilizer recommendation
-
-\- Drone analysis
-
-\- Satellite crop monitoring
-
-\- Multi-crop support
-
+Parth Savaliya
