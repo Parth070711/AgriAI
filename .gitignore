@@ -1,6 +1,11 @@
 backend/venv/
 frontend/node_modules/
 backend/uploads/
+
 backend/dataset/
+dataset/
+
+dataset_leaf/
+
 __pycache__/
 *.pyc

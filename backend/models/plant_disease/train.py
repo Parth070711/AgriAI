@@ -4,8 +4,7 @@ from torchvision import datasets, transforms, models
 from torch.utils.data import DataLoader, random_split
 
 # Dataset path
-DATASET_PATH = r"C:\Users\parth\AgriAI\backend\dataset\PlantVillage"
-
+DATASET_PATH = r"D:\AgriAI\backend\dataset\PlantVillage"
 # Image transforms
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
@@ -44,11 +43,13 @@ val_loader = DataLoader(
 )
 
 # Load pretrained ResNet18
-model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
+model = models.mobilenet_v2(
+    weights=models.MobileNet_V2_Weights.DEFAULT
+)
 
-num_features = model.fc.in_features
+num_features = model.classifier[1].in_features
 
-model.fc = nn.Linear(
+model.classifier[1] = nn.Linear(
     num_features,
     len(class_names)
 )
