@@ -47,6 +47,7 @@ function App() {
   reader.readAsDataURL(selected);
 };
 
+
   const uploadImage = async () => {
     if (!file) {
       alert("Please select an image.");
@@ -67,9 +68,15 @@ function App() {
         }
       );
 
-      const data = await response.json();
+const data = await response.json();
 
-      setResult(data);
+if (data.status === "error") {
+  alert(data.message);
+  setLoading(false);
+  return;
+}
+
+setResult(data);
     } catch (error) {
       console.error(error);
       alert("Failed to connect to backend.");
