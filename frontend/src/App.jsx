@@ -47,9 +47,6 @@ function App() {
   reader.readAsDataURL(selected);
 };
 
-  reader.readAsDataURL(selected);
-};
-
   const uploadImage = async () => {
     if (!file) {
       alert("Please select an image.");
