@@ -65,7 +65,7 @@ optimizer = torch.optim.Adam(
     lr=0.001
 )
 
-EPOCHS = 1
+EPOCHS = 5
 
 for epoch in range(EPOCHS):
 
