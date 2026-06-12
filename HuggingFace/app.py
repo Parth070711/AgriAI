@@ -211,58 +211,152 @@ disease_info = {
         "about": "No disease symptoms detected."
     },
 
-    "Rice__Healthy_Rice_Leaf": {
-        "crop": "Rice",
-        "severity": "🟢 Healthy",
-        "health_score": 100,
-        "recommendation": "Continue regular crop care.",
-        "action": "Routine monitoring only.",
-        "about": "Healthy rice leaf with no disease symptoms."
-    },
-
-    "Rice__Bacterial_Leaf_Blight": {
-        "crop": "Rice",
+    # =========================
+    # Rice (Paddy) Diseases
+    # =========================
+    
+    "Rice_Bacterial_Leaf_Blight": {
+        "crop": "Rice (Paddy)",
         "severity": "🔴 Severe",
         "health_score": 40,
-        "recommendation": "Use resistant varieties and balanced fertilizer.",
-        "action": "Improve drainage and remove infected plants.",
-        "about": "Bacterial Leaf Blight is a serious disease causing leaf drying and yield loss."
+        "recommendation": "Apply recommended bactericide and use resistant rice varieties.",
+        "action": "Remove infected leaves, avoid excess nitrogen fertilizer, and maintain field hygiene.",
+        "about": "Bacterial Leaf Blight is a destructive bacterial disease causing yellowing and drying of rice leaves."
     },
-
-    "Rice__Brown_Spot": {
-        "crop": "Rice",
+    
+    "Rice_Bacterial_Leaf_Streak": {
+        "crop": "Rice (Paddy)",
         "severity": "🟠 Moderate",
-        "health_score": 65,
-        "recommendation": "Apply fungicide and improve soil nutrition.",
-        "action": "Monitor affected plants and correct nutrient deficiencies.",
-        "about": "Brown Spot causes brown lesions on rice leaves."
+        "health_score": 60,
+        "recommendation": "Use disease-free seeds and copper-based bactericides if recommended.",
+        "action": "Avoid overhead irrigation and remove infected plant debris.",
+        "about": "Bacterial Leaf Streak appears as narrow translucent streaks on rice leaves."
     },
-
-    "Rice__Leaf_Blast": {
-        "crop": "Rice",
+    
+    "Rice_Bacterial_Panicle_Blight": {
+        "crop": "Rice (Paddy)",
+        "severity": "🔴 Severe",
+        "health_score": 45,
+        "recommendation": "Use certified seeds and avoid excessive nitrogen fertilizer.",
+        "action": "Monitor flowering stage carefully and maintain proper field sanitation.",
+        "about": "Bacterial Panicle Blight affects rice grains and significantly reduces yield."
+    },
+    
+    "Rice_Blast": {
+        "crop": "Rice (Paddy)",
         "severity": "🔴 Severe",
         "health_score": 35,
-        "recommendation": "Apply appropriate fungicide immediately.",
-        "action": "Inspect neighboring plants and isolate heavily infected areas.",
-        "about": "Leaf Blast is one of the most destructive rice diseases."
+        "recommendation": "Apply tricyclazole or other recommended fungicides immediately.",
+        "action": "Avoid excessive nitrogen fertilizer and inspect fields regularly.",
+        "about": "Rice Blast is one of the most destructive fungal diseases affecting rice leaves."
+    },
+    
+    "Rice_Brown_Spot": {
+        "crop": "Rice (Paddy)",
+        "severity": "🟡 Moderate",
+        "health_score": 70,
+        "recommendation": "Apply fungicide and maintain balanced fertilization.",
+        "action": "Improve field drainage and monitor disease progression.",
+        "about": "Brown Spot causes circular brown lesions on rice leaves and reduces grain quality."
+    },
+    
+    "Rice_Dead_Heart": {
+        "crop": "Rice (Paddy)",
+        "severity": "🔴 Severe",
+        "health_score": 40,
+        "recommendation": "Control stem borer infestation using recommended insecticides.",
+        "action": "Remove damaged tillers and monitor fields weekly.",
+        "about": "Dead Heart is caused by stem borers that kill the central shoot of young rice plants."
+    },
+    
+    "Rice_Downy_Mildew": {
+        "crop": "Rice (Paddy)",
+        "severity": "🟠 Moderate",
+        "health_score": 60,
+        "recommendation": "Use fungicides and improve field drainage.",
+        "action": "Reduce excessive moisture and remove infected plants.",
+        "about": "Downy Mildew is a fungal disease causing pale leaves and reduced plant vigor."
+    },
+    
+    "Rice_Hispa": {
+        "crop": "Rice (Paddy)",
+        "severity": "🟠 Moderate",
+        "health_score": 65,
+        "recommendation": "Control Rice Hispa using recommended insecticides or neem-based sprays.",
+        "action": "Monitor leaves regularly and remove severely damaged plants.",
+        "about": "Rice Hispa is an insect pest that scrapes leaf tissues, reducing photosynthesis."
+    },
+    
+    "Rice_Tungro": {
+        "crop": "Rice (Paddy)",
+        "severity": "🔴 Severe",
+        "health_score": 30,
+        "recommendation": "Control green leafhoppers and remove infected plants immediately.",
+        "action": "Use resistant varieties and maintain field sanitation.",
+        "about": "Rice Tungro is a viral disease causing yellow-orange discoloration and severe yield loss."
+    },
+    
+    "Rice_Healthy": {
+        "crop": "Rice (Paddy)",
+        "severity": "🟢 Healthy",
+        "health_score": 100,
+        "recommendation": "Continue regular irrigation, fertilization, and crop monitoring.",
+        "action": "Maintain current farming practices and inspect fields weekly.",
+        "about": "Healthy rice plant with no visible disease symptoms."
     },
     
     "Rice__Leaf_scald": {
-        "crop": "Rice",
+        "crop": "Rice (Paddy)",
         "severity": "🟡 Moderate",
-        "health_score": 70,
-        "recommendation": "Maintain balanced fertilization and field hygiene.",
-        "action": "Remove infected debris and monitor crop regularly.",
-        "about": "Leaf Scald causes drying and discoloration of rice leaves."
+        "health_score": 65,
+        "recommendation": "Apply recommended fungicide and avoid water stress.",
+        "action": "Improve nutrient management and monitor affected areas.",
+        "about": "Leaf Scald causes elongated lesions with brown borders on rice leaves."
     },
     
     "Rice__Sheath_Blight": {
-        "crop": "Rice",
+        "crop": "Rice (Paddy)",
+        "severity": "🔴 Severe",
+        "health_score": 45,
+        "recommendation": "Apply validamycin or other recommended fungicides.",
+        "action": "Reduce plant density, improve air circulation, and avoid excessive nitrogen.",
+        "about": "Sheath Blight is a fungal disease that attacks the leaf sheath and reduces rice yield."
+    },
+    
+    "Bitter_Gourd_Downy_Mildew": {
+        "crop": "Bitter Gourd",
         "severity": "🟠 Moderate",
-        "health_score": 60,
-        "recommendation": "Reduce excess nitrogen and apply fungicide.",
-        "action": "Improve spacing between plants and monitor humidity.",
-        "about": "Sheath Blight is a fungal disease affecting rice stems and leaves."
+        "health_score": 65,
+        "recommendation": "Apply recommended fungicide and improve field ventilation.",
+        "action": "Avoid overhead irrigation and remove infected leaves.",
+        "about": "Downy Mildew is a fungal disease causing yellow patches and grey fungal growth on leaves."
+    },
+
+    "Bitter_Gourd_Fusarium_Wilt": {
+        "crop": "Bitter Gourd",
+        "severity": "🔴 Severe",
+        "health_score": 35,
+        "recommendation": "Use disease-free seedlings and apply appropriate fungicides.",
+        "action": "Remove infected plants and improve soil drainage.",
+        "about": "Fusarium Wilt is a soil-borne fungal disease that causes wilting and plant death."
+    },
+    
+    "Bitter_Gourd_Healthy": {
+        "crop": "Bitter Gourd",
+        "severity": "🟢 Healthy",
+        "health_score": 100,
+        "recommendation": "Continue regular irrigation and nutrient management.",
+        "action": "Maintain current farming practices and inspect plants regularly.",
+        "about": "Healthy bitter gourd plant with no visible disease symptoms."
+    },
+    
+    "Bitter_Gourd_Mosaic_Virus": {
+        "crop": "Bitter Gourd",
+        "severity": "🔴 Severe",
+        "health_score": 30,
+        "recommendation": "Control aphids and remove infected plants immediately.",
+        "action": "Use virus-free seeds and manage insect vectors.",
+        "about": "Mosaic Virus causes mottled leaves, distorted growth, and significant yield loss."
     },
 }
 
