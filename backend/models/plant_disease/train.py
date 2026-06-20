@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from torchvision import datasets, transforms, models
 from torch.utils.data import DataLoader, random_split
+torch.backends.cudnn.benchmark = True
 
 # Dataset path
 DATASET_PATH = r"D:\AgriAI\backend\dataset\PlantVillage"
@@ -34,12 +35,16 @@ train_dataset, val_dataset = random_split(
 train_loader = DataLoader(
     train_dataset,
     batch_size=32,
-    shuffle=True
+    shuffle=True,
+    num_workers=0,
+    pin_memory=True,
 )
 
 val_loader = DataLoader(
     val_dataset,
-    batch_size=32
+    batch_size=32,
+    num_workers=0,
+    pin_memory=True,
 )
 
 # Load pretrained ResNet18
@@ -54,7 +59,11 @@ model.classifier[1] = nn.Linear(
     len(class_names)
 )
 
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+
+if torch.cuda.is_available():
+    print("GPU:", torch.cuda.get_device_name(0))
 
 model = model.to(device)
 
@@ -65,7 +74,7 @@ optimizer = torch.optim.Adam(
     lr=0.001
 )
 
-EPOCHS = 5
+EPOCHS = 50
 
 for epoch in range(EPOCHS):
 

@@ -1,11 +1,46 @@
-backend/venv/
-frontend/node_modules/
-backend/uploads/
-
-backend/dataset/
-dataset/
-
-dataset_leaf/
-
+# ==========================
+# Python
+# ==========================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# ==========================
+# Virtual Environments
+# ==========================
+backend/venv/
+backend/venv_gpu/
+
+# ==========================
+# Node.js
+# ==========================
+frontend/node_modules/
+
+# ==========================
+# Uploads
+# ==========================
+backend/uploads/
+
+# ==========================
+# Datasets
+# ==========================
+backend/dataset/
+backend/dataset_leaf/
+dataset/
+dataset_leaf/
+
+# ==========================
+# Sample Images
+# ==========================
+backend/sample_test_images/
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+
+# ==========================
+# Environment Variables
+# ==========================
+.env
