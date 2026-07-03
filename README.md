@@ -1,77 +1,155 @@
-# 🌱 AgriAI
+🌱 AgriAI - Smart Crop Disease Detection Platform
 
-AI-powered crop disease detection platform for farmers and agricultural professionals.
+AgriAI is an AI-powered agriculture platform that helps farmers identify crop diseases instantly using deep learning. Upload a photo of a crop leaf, and AgriAI analyzes the image to detect diseases, estimate crop health, and provide actionable treatment recommendations.
 
-## 🚀 Live Demo
+---
 
-👉 https://huggingface.co/spaces/PARTH0076/agri-ai
+🚀 Live Demo
 
-## 📂 Source Code
+🔗 Hugging Face Space:
+https://huggingface.co/spaces/PARTH0076/agri-ai
 
-👉 https://github.com/Parth070711/AgriAI
+🔗 GitHub Repository:
+https://github.com/Parth070711/AgriAI
 
-## Features
+---
 
-* Upload crop leaf images
-* AI disease detection
-* Confidence score
-* Disease severity analysis
-* Health score calculation
-* Treatment recommendations
-* Rice disease detection
-* Leaf validation (Leaf vs Non-Leaf)
+✨ Features
 
-## Supported Crops
+- 🌿 AI-powered crop disease detection
+- 🍃 Leaf vs Non-Leaf validation
+- 📊 Confidence score prediction
+- ❤️ Crop health score analysis
+- ⚠️ Disease severity estimation
+- 💊 Treatment and prevention recommendations
+- 🚜 Farmer action plan
+- 🤖 AI Agriculture Assistant powered by Groq Llama 3.1
+- ⚡ Fast and easy-to-use web interface
 
-* 🍅 Tomato
-* 🥔 Potato
-* 🫑 Bell Pepper
-* 🌾 Rice
+---
 
-## Tech Stack
+🌾 Supported Crops
 
-### Frontend
+- 🍅 Tomato
+- 🥔 Potato
+- 🫑 Bell Pepper
+- 🌾 Rice (Paddy)
+- 🥒 Bitter Gourd
+- 🥭 Mango
+- 🍆 Eggplant (Brinjal)
+- 🌶️ Chilli
+- 🥒 Bottle Gourd
+- 🌿 Black Gram
+- 🌱 Pigeon Pea
+- 🌺 Okra (Lady Finger)
 
-* React
-* Vite
+Current Disease Classes: 69
 
-### Backend
+---
 
-* FastAPI
-* PyTorch
+🧠 AI Models
 
-### AI Models
+Disease Detection Model
 
-* ResNet18 Disease Detection Model
-* Leaf Detector Model
-* PlantVillage Dataset
+- MobileNetV2
+- PyTorch
+- Transfer Learning
+- 69 Crop Disease Classes
 
-## Run Frontend
+Leaf Validation Model
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- MobileNetV2
+- Detects Leaf vs Non-Leaf Images
 
-## Run Backend
+---
 
-```bash
-cd backend
+🤖 AI Agriculture Assistant
+
+Powered by Groq using Llama 3.1 8B Instant.
+
+Ask questions about:
+
+- Crop diseases
+- Fertilizers
+- Irrigation
+- Pest management
+- Yield improvement
+- Sustainable farming practices
+
+---
+
+🛠️ Tech Stack
+
+Frontend
+
+- Gradio
+
+AI & Machine Learning
+
+- PyTorch
+- TorchVision
+- MobileNetV2
+- Pillow
+
+AI API
+
+- Groq API
+- Llama 3.1 8B Instant
+
+Deployment
+
+- Hugging Face Spaces
+
+---
+
+📂 Project Structure
+
+AgriAI/
+│── app.py
+│── model.pth
+│── leaf_detector.pth
+│── requirements.txt
+│── README.md
+
+---
+
+📦 Installation
+
+git clone https://github.com/Parth070711/AgriAI.git
+
+cd AgriAI
+
 pip install -r requirements.txt
-uvicorn main:app --reload
-```
 
-## Future Features
+python app.py
 
-* 🌦 Weather Integration
-* 🌱 Fertilizer Recommendation
-* 🌽 Corn Disease Detection
-* 🌾 Wheat Disease Detection
-* 🚁 Drone Analysis
-* 🛰 Satellite Crop Monitoring
-* 🤖 AI Agriculture Expert Assistant
+---
 
-## Author
+🎯 Future Roadmap
+
+- 🌦️ Weather Forecast Integration
+- 🌱 Fertilizer Recommendation System
+- 🌍 Multi-language Farmer Support
+- 📈 Crop Yield Prediction
+- 🛰️ Satellite Crop Monitoring
+- 🚁 Drone Image Analysis
+- 📍 GPS-based Farm Monitoring
+- 📊 Farmer Dashboard
+- 📱 Android & iOS Mobile App
+- 🛒 Marketplace for Farmers and Buyers
+
+---
+
+👨‍💻 Developer
 
 Parth Savaliya
+
+Passionate about Artificial Intelligence, Agriculture, Computer Vision, and Building AI Solutions for Real-World Farming.
+
+---
+
+⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub. Your support motivates future improvements and helps the project reach more people.
+
+Together, let's build smarter and more sustainable agriculture with AI! 🌱
