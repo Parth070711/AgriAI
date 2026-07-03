@@ -2,17 +2,10 @@
 
 AgriAI is an AI-powered agriculture platform that helps farmers identify crop diseases instantly using deep learning. Upload a photo of a crop leaf, and AgriAI analyzes the image to detect diseases, estimate crop health, and provide actionable treatment recommendations.
 
----
-
 🚀 Live Demo
 
-🔗 Hugging Face Space:
-https://huggingface.co/spaces/PARTH0076/agri-ai
-
-🔗 GitHub Repository:
-https://github.com/Parth070711/AgriAI
-
----
+- 🔗 Hugging Face Space: https://huggingface.co/spaces/PARTH0076/agri-ai
+- 🔗 GitHub Repository: https://github.com/Parth070711/AgriAI
 
 ✨ Features
 
@@ -25,8 +18,6 @@ https://github.com/Parth070711/AgriAI
 - 🚜 Farmer action plan
 - 🤖 AI Agriculture Assistant powered by Groq Llama 3.1
 - ⚡ Fast and easy-to-use web interface
-
----
 
 🌾 Supported Crops
 
@@ -45,8 +36,6 @@ https://github.com/Parth070711/AgriAI
 
 Current Disease Classes: 69
 
----
-
 🧠 AI Models
 
 Disease Detection Model
@@ -60,23 +49,6 @@ Leaf Validation Model
 
 - MobileNetV2
 - Detects Leaf vs Non-Leaf Images
-
----
-
-🤖 AI Agriculture Assistant
-
-Powered by Groq using Llama 3.1 8B Instant.
-
-Ask questions about:
-
-- Crop diseases
-- Fertilizers
-- Irrigation
-- Pest management
-- Yield improvement
-- Sustainable farming practices
-
----
 
 🛠️ Tech Stack
 
@@ -100,53 +72,11 @@ Deployment
 
 - Hugging Face Spaces
 
----
-
-📂 Project Structure
-
-AgriAI/
-│── app.py
-│── model.pth
-│── leaf_detector.pth
-│── requirements.txt
-│── README.md
-
----
-
-📦 Installation
-
-git clone https://github.com/Parth070711/AgriAI.git
-
-cd AgriAI
-
-pip install -r requirements.txt
-
-python app.py
-
----
-
-🎯 Future Roadmap
-
-- 🌦️ Weather Forecast Integration
-- 🌱 Fertilizer Recommendation System
-- 🌍 Multi-language Farmer Support
-- 📈 Crop Yield Prediction
-- 🛰️ Satellite Crop Monitoring
-- 🚁 Drone Image Analysis
-- 📍 GPS-based Farm Monitoring
-- 📊 Farmer Dashboard
-- 📱 Android & iOS Mobile App
-- 🛒 Marketplace for Farmers and Buyers
-
----
-
 👨‍💻 Developer
 
 Parth Savaliya
 
 Passionate about Artificial Intelligence, Agriculture, Computer Vision, and Building AI Solutions for Real-World Farming.
-
----
 
 ⭐ Support
 
