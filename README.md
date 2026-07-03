@@ -1,4 +1,4 @@
-**#🌱 AgriAI - Smart Crop Disease Detection Platform**
+#**🌱 AgriAI - Smart Crop Disease Detection Platform**
 
 AgriAI is an AI-powered agriculture platform that helps farmers and agricultural professionals identify crop diseases instantly using Deep Learning and Computer Vision. Simply upload a crop leaf image, and AgriAI detects the disease, estimates crop health, and provides treatment recommendations.
 
